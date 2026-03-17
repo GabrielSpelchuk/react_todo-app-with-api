@@ -1,7 +1,7 @@
 enum EFilter {
-  'all',
-  'completed',
-  'active',
+  all = 'All',
+  active = 'Active',
+  completed = 'Completed',
 }
 
 export default EFilter;

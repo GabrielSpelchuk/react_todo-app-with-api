@@ -71,7 +71,7 @@ export const TodoFooter: React.FC<ITodoFooter> = ({
           data-cy="FilterLinkAll"
           onClick={() => setFilter(EFilter.all)}
         >
-          All
+          {EFilter.all}
         </a>
 
         <a
@@ -82,7 +82,7 @@ export const TodoFooter: React.FC<ITodoFooter> = ({
           data-cy="FilterLinkActive"
           onClick={() => setFilter(EFilter.active)}
         >
-          Active
+          {EFilter.active}
         </a>
 
         <a
@@ -93,7 +93,7 @@ export const TodoFooter: React.FC<ITodoFooter> = ({
           data-cy="FilterLinkCompleted"
           onClick={() => setFilter(EFilter.completed)}
         >
-          Completed
+          {EFilter.completed}
         </a>
       </nav>
 

@@ -92,6 +92,11 @@ export const TodoList: React.FC<ITodoList> = ({
     }
   };
 
+  const handleDoubleClick = (todo: Todo) => {
+    setEdidingId(todo.id);
+    setTempTitle(todo.title);
+  };
+
   const handleKeyDown = (event: React.KeyboardEvent) => {
     if (event.key === 'Escape') {
       setEdidingId(null);
@@ -125,8 +130,7 @@ export const TodoList: React.FC<ITodoList> = ({
                   data-cy="TodoTitle"
                   className="todo__title"
                   onDoubleClick={() => {
-                    setTempTitle(todo.title);
-                    setEdidingId(todo.id);
+                    handleDoubleClick(todo);
                   }}
                 >
                   {todo.title}
